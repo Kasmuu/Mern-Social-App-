@@ -133,7 +133,8 @@ const Auth = () => {
           >
             {isSignUp ? "Sign Up" : "Sign In"}
           </Button>
-          <GoogleOAuthProvider clientId="56095215645-epdb0ofei7kaqeng9q33e7kdpkje58mq.apps.googleusercontent.com">
+          <GoogleOAuthProvider clientId={process.env.REACT_APP_GOOGLE_CLIENT_ID}>
+
             <GoogleLogin
               onSuccess={googleSuccess}
               onError={googleFailure}
